@@ -1,0 +1,21 @@
+<!--#set var="TITLE" value="ECGSYN implemented in Java"-->
+<!--#include virtual="/head.shtml"-->
+
+
+<p>
+This directory contains Mauricio Villarroel's implementation of
+<a href="../">ECGSYN</a> as a Java applet.
+
+<p>
+To run the applet in your web browser, click
+<a href="ecgsyn-java.html">here</a>.
+
+<p>
+The individual Java files can be downloaded by following the links
+below, or you may download all of them, together with the C and Matlab
+implementations of ECGSYN, as a single gzip-compressed tar archive, <a
+href="../ecgsyn.tar.gz"><tt>ecgsyn.tar.gz</tt></a>.  (See <a
+href="/faq.shtml#tar-gz">How can I unpack a .tar.gz archive?</a> if
+you need help doing this.)
+
+<hr>

@@ -1,0 +1,14 @@
+<!--#set var="TITLE" value="ECGSYN for Windows"-->
+<!--#include virtual="/head.shtml"-->
+
+<p>
+  There are two versions of the <code>ecgsyn.exe</code> executable in this directory. Using the
+  <a href="../src/">ECGSYN source files</a>, the first version was compiled with <code>Cygwin64 2.6.0 gcc 5.4.0</code>,
+  and the second version with <code>MinGW-w64 gcc 4.9.2</code>, both under Windows 10.</p>
+
+<p>
+To run the Cygwin executable, you will need to have the Cygwin DLLs installed in your PATH in
+order to run this program successfully. The simplest and most reliable
+way to do this is to install the <a href="http://www.cygwin.com/" target="other">Cygwin development toolkit</a>.
+To run the MinGW executable, you should install <a href="https://sourceforge.net/projects/mingw-w64/" target="other">MinGW-w64</a>.
+</p>

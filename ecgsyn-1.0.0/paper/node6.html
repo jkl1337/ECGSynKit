@@ -1,0 +1,178 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+
+<!--Converted with jLaTeX2HTML 2002 (1.62) JA patch-1.4
+patched version by:  Kenshi Muto, Debian Project.
+LaTeX2HTML 2002 (1.62),
+original version by:  Nikos Drakos, CBLU, University of Leeds
+* revised and updated by:  Marcus Hennecke, Ross Moore, Herb Swan
+* with significant contributions from:
+  Jens Lippmann, Marek Rouchal, Martin Wilck and others -->
+<HTML>
+<HEAD>
+<TITLE>Conclusions</TITLE>
+<META NAME="description" CONTENT="Conclusions">
+<META NAME="keywords" CONTENT="ecgpqrst">
+<META NAME="resource-type" CONTENT="document">
+<META NAME="distribution" CONTENT="global">
+
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-8859-1">
+<META NAME="Generator" CONTENT="jLaTeX2HTML v2002 JA patch-1.4">
+<META HTTP-EQUIV="Content-Style-Type" CONTENT="text/css">
+
+<LINK REL="STYLESHEET" HREF="ecgpqrst.css">
+
+<LINK REL="next" HREF="node7.html">
+<LINK REL="previous" HREF="node5.html">
+<LINK REL="up" HREF="index.shtml">
+<LINK REL="next" HREF="node7.html">
+</HEAD>
+
+<BODY >
+<!--Navigation Panel-->
+<A NAME="tex2html85"
+  HREF="node7.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next"
+ SRC="file:/usr/share/latex2html/icons/next.png"></A> 
+<A NAME="tex2html83"
+  HREF="index.shtml">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up"
+ SRC="file:/usr/share/latex2html/icons/up.png"></A> 
+<A NAME="tex2html77"
+  HREF="node5.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous"
+ SRC="file:/usr/share/latex2html/icons/prev.png"></A>   
+<BR>
+<B> Next:</B> <A NAME="tex2html86"
+  HREF="node7.html">Acknowledgements</A>
+<B> Up:</B> <A NAME="tex2html84"
+  HREF="index.shtml">A dynamical model for</A>
+<B> Previous:</B> <A NAME="tex2html78"
+  HREF="node5.html">Results</A>
+<BR>
+<BR>
+<!--End of Navigation Panel-->
+
+<H1><A NAME="SECTION00060000000000000000"></A>
+<A NAME="s:conclusions"></A>
+<BR>
+Conclusions
+</H1>
+A new dynamical model has been introduced which is capable of replicating 
+many of the important features of the human ECG. 
+Moreover, many of the morphological changes observed in the human ECG 
+manifest as a consequence of the geometrical structure of the model. 
+Model parameters may be 
+chosen to generate different morphologies for the PQRST-complex. 
+The power spectrum of the RR-intervals can be selected <I>a priori</I> and used 
+to drive the ECG generator. This allows the operator to prescribe specific 
+characteristics of the heart rate dynamics such as the mean and standard 
+deviation of the heart rate and 
+spectral properties such as the LF/HF ratio. 
+In addition the average morphology can be controlled by specifying the 
+positions of the P,Q,R,S and T events and the magnitude of their effect 
+on the ECG. 
+
+Having access to a realistic ECG provides a benchmark for testing 
+numerous biomedical signal processing techniques. In order to establish 
+the operational properties of these techniques in a clinical setting, 
+it is important to know 
+how they perform for different noise levels and sampling frequencies.
+
+A number of applications and simple extensions of the model are possible: 
+
+(i) By fitting (see [<A
+ HREF="node8.html#mcsharry99a">17</A>]) the model  
+to the morphology of a particular subject's ECG 
+and the power spectrum of their RR-intervals, 
+a database of realistic ECGs could be created. 
+This database could be employed for statistical hypothesis testing. 
+Furthermore, it may be possible derive a corrected QT-interval which is 
+independent of the heart rate. 
+
+(ii) The synthetic ECG could be used to assess the effectiveness of 
+different techniques for noise and artefact removal. 
+These could be evaluated by adding noise and/or artefact onto the 
+synthetic signal and then comparing the original with the processed signal.
+
+(iii) Abnormal morphological changes with time could be introduced 
+by using a parameter to control the position of any of the P,Q,R,S or T events. 
+This extension would be particularly useful for testing techniques 
+which aim to detect ST depression or elevation by decreasing or 
+increasing the <IMG
+ WIDTH="12" HEIGHT="14" ALIGN="BOTTOM" BORDER="0"
+ SRC="img12.png"
+ ALT="$z$">-position of the T wave over time.  
+Similarly QT prolongation could be replicated by moving the T point away 
+from the Q point in the <IMG
+ WIDTH="41" HEIGHT="31" ALIGN="MIDDLE" BORDER="0"
+ SRC="img11.png"
+ ALT="$(x,y)$"> plane (increasing 
+<!-- MATH
+ $\theta_T - \theta_Q$
+ -->
+<IMG
+ WIDTH="59" HEIGHT="29" ALIGN="MIDDLE" BORDER="0"
+ SRC="img69.png"
+ ALT="$\theta_T - \theta_Q$">). 
+
+(iv) The model could be used to produce multi-lead ECG signals by 
+introducing a measurement function which maps from the 
+<IMG
+ WIDTH="56" HEIGHT="31" ALIGN="MIDDLE" BORDER="0"
+ SRC="img1.png"
+ ALT="$(x,y,z)$"> model space to the ECG signal: <IMG
+ WIDTH="94" HEIGHT="31" ALIGN="MIDDLE" BORDER="0"
+ SRC="img70.png"
+ ALT="$s = h(x,y,z)$">. Different lead 
+configurations and modulations due to respiration and movement of the 
+cardiac axis could be modelled using time-dependent functions for <IMG
+ WIDTH="13" HEIGHT="15" ALIGN="BOTTOM" BORDER="0"
+ SRC="img71.png"
+ ALT="$h$">. 
+
+(v) Abnormal beats, such as ectopics, can be simulated by 
+modifying the position of the R-peak for one cycle of the dynamics.
+
+The new model presented here reflects a data-driven approach to modelling the 
+electrical activity of the heart. Key physiological features have been 
+incorporated using motion of a trajectory throughout a three-dimensional state
+space. The quasi-periodicity of the cardiac cycle is represented by  
+attraction towards a limit cycle. 
+The model produces QT-intervals and R-peak height variation (RSA)
+which vary linearly with the RR-intervals  
+as has been found in real ECGs [<A
+ HREF="node8.html#moody86">6</A>,<A
+ HREF="node8.html#davey99">4</A>]. 
+It is hoped that this model will provide a valuable tool 
+for testing biomedical signal processing algorithms applied to ECG signals 
+with different sampling frequencies and 
+levels of noise and/or movement artefact.
+
+<HR>
+<!--Navigation Panel-->
+<A NAME="tex2html85"
+  HREF="node7.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next"
+ SRC="file:/usr/share/latex2html/icons/next.png"></A> 
+<A NAME="tex2html83"
+  HREF="index.shtml">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up"
+ SRC="file:/usr/share/latex2html/icons/up.png"></A> 
+<A NAME="tex2html77"
+  HREF="node5.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous"
+ SRC="file:/usr/share/latex2html/icons/prev.png"></A>   
+<BR>
+<B> Next:</B> <A NAME="tex2html86"
+  HREF="node7.html">Acknowledgements</A>
+<B> Up:</B> <A NAME="tex2html84"
+  HREF="index.shtml">A dynamical model for</A>
+<B> Previous:</B> <A NAME="tex2html78"
+  HREF="node5.html">Results</A>
+<!--End of Navigation Panel-->
+<ADDRESS>
+
+2003-10-08
+</ADDRESS>
+</BODY>
+</HTML>

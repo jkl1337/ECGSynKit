@@ -1,0 +1,159 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+
+<!--Converted with jLaTeX2HTML 2002 (1.62) JA patch-1.4
+patched version by:  Kenshi Muto, Debian Project.
+LaTeX2HTML 2002 (1.62),
+original version by:  Nikos Drakos, CBLU, University of Leeds
+* revised and updated by:  Marcus Hennecke, Ross Moore, Herb Swan
+* with significant contributions from:
+  Jens Lippmann, Marek Rouchal, Martin Wilck and others -->
+<HTML>
+<HEAD>
+<TITLE>A dynamical model for generating synthetic electrocardiogram signals</TITLE>
+<META NAME="description" CONTENT="A dynamical model for generating synthetic electrocardiogram signals">
+<META NAME="keywords" CONTENT="ecgpqrst">
+<META NAME="resource-type" CONTENT="document">
+<META NAME="distribution" CONTENT="global">
+
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-8859-1">
+<META NAME="Generator" CONTENT="jLaTeX2HTML v2002 JA patch-1.4">
+<META HTTP-EQUIV="Content-Style-Type" CONTENT="text/css">
+
+<LINK REL="STYLESHEET" HREF="ecgpqrst.css">
+
+<LINK REL="next" HREF="node1.html">
+</HEAD>
+
+<BODY >
+<!--#include virtual="/links-physiotools.html" -->
+<!--Navigation Panel-->
+<A NAME="tex2html16"
+  HREF="node1.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next"
+ SRC="file:/usr/share/latex2html/icons/next.png"></A> 
+<A NAME="tex2html16a"
+  HREF="../">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up"
+ SRC="file:/usr/share/latex2html/icons/up.png"></A> 
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous"
+ SRC="file:/usr/share/latex2html/icons/prev_g.png">
+<BR>
+<B> Next:</B> <A NAME="tex2html17"
+  HREF="node1.html">Introduction</A>
+<B> Up:</B> <A NAME="tex2html17a"
+  HREF="../">ECGSYN</A>
+<BR>
+<BR>
+<!--End of Navigation Panel-->
+
+ 
+<H1 ALIGN="CENTER">A dynamical model for generating synthetic electrocardiogram signals</H1>
+<P ALIGN="CENTER"><STRONG>Patrick E. McSharry<IMG
+ WIDTH="21" HEIGHT="17" ALIGN="BOTTOM" BORDER="0"
+ SRC="img4.png"
+ ALT="$^{1,2}$">, Gari Clifford<IMG
+ WIDTH="11" HEIGHT="17" ALIGN="BOTTOM" BORDER="0"
+ SRC="img5.png"
+ ALT="$^1$">, 
+Lionel Tarassenko<IMG
+ WIDTH="11" HEIGHT="17" ALIGN="BOTTOM" BORDER="0"
+ SRC="img5.png"
+ ALT="$^1$"> and Leonard A. Smith<IMG
+ WIDTH="21" HEIGHT="17" ALIGN="BOTTOM" BORDER="0"
+ SRC="img6.png"
+ ALT="$^{2,3}$">
+<A NAME="tex2html1"
+  HREF="footnode.html#foot31"><SUP><IMG  ALIGN="BOTTOM" BORDER="1" ALT="[*]"
+ SRC="file:/usr/share/latex2html/icons/footnote.png"></SUP></A>
+<A NAME="tex2html2"
+  HREF="footnode.html#foot32"><SUP><IMG  ALIGN="BOTTOM" BORDER="1" ALT="[*]"
+ SRC="file:/usr/share/latex2html/icons/footnote.png"></SUP></A>
+<A NAME="tex2html3"
+  HREF="footnode.html#foot33"><SUP><IMG  ALIGN="BOTTOM" BORDER="1" ALT="[*]"
+ SRC="file:/usr/share/latex2html/icons/footnote.png"></SUP></A>
+<A NAME="tex2html4"
+  HREF="footnode.html#foot34"><SUP><IMG  ALIGN="BOTTOM" BORDER="1" ALT="[*]"
+ SRC="file:/usr/share/latex2html/icons/footnote.png"></SUP></A></STRONG></P>
+
+<center><table bgcolor="lightblue" width="90%">
+<tr><td>
+<p>
+This article originally appeared in <em>IEEE Transactions on Biomedical
+Engineering</em>, <b>50</b>(3):289-294; March 2003.  Please cite this
+publication when referencing this material.
+<p>
+(C)2002 IEEE. Personal use of this material is permitted. However, permission
+to reprint/republish this material for advertising or promotional purposes or
+for creating new collective works for resale or redistribution to servers or
+lists, or to reuse any copyrighted component of this work in other works must
+be obtained from the IEEE. This material is presented to ensure timely
+dissemination of scholarly and technical work. Copyright and all rights therein
+are retained by authors or by other copyright holders. All persons copying this
+information are expected to adhere to the terms and constraints invoked by each
+author's copyright. In most cases, these works may not be reposted without the
+explicit permission of the copyright holder.
+<p>
+Software that implements the model described in this paper is freely available
+<a href="../">here</a>.
+</td></tr>
+</table></center>
+
+<H3>Abstract:</H3>
+<DIV>
+A dynamical model based on three coupled ordinary differential equations 
+is introduced which is capable of generating realistic synthetic 
+electrocardiogram (ECG) signals.  The operator can specify the mean and 
+standard deviation of the heart rate, the morphology of the PQRST 
+cycle and the power spectrum of the RR tachogram.  
+In particular, both Respiratory Sinus Arrhythmia at the high frequencies
+(HF) and Mayer waves at the low frequencies (LF) 
+together with the LF/HF ratio are incorporated in the model. 
+Much of the beat-to-beat variation in morphology and timing of the human 
+ECG, including QT dispersion and R-peak amplitude modulation 
+are shown to result. This model may be employed to assess biomedical 
+signal processing techniques which are used to compute clinical statistics 
+from the ECG. 
+</DIV>
+<P>
+
+<BR>
+<IMG
+ WIDTH="555" HEIGHT="51" ALIGN="BOTTOM" BORDER="0"
+ SRC="img9.png"
+ ALT="\begin{keywords}
+Dynamical model, synthetic ECG, QRS morphology, Respiratory si...
+... Heart rate variability, RR tachogram, RR-interval, QT-interval.
+\end{keywords}">
+<BR>
+<BR><HR>
+<!--Table of Child-Links-->
+<A NAME="CHILD_LINKS"></A>
+
+<UL>
+<LI><A NAME="tex2html18"
+  HREF="node1.html">Introduction</A>
+<LI><A NAME="tex2html19"
+  HREF="node2.html">ECG morphology</A>
+<LI><A NAME="tex2html20"
+  HREF="node3.html">Heart rate variability</A>
+<LI><A NAME="tex2html21"
+  HREF="node4.html">The dynamical model</A>
+<LI><A NAME="tex2html22"
+  HREF="node5.html">Results</A>
+<LI><A NAME="tex2html23"
+  HREF="node6.html">Conclusions</A>
+<LI><A NAME="tex2html24"
+  HREF="node7.html">Acknowledgements</A>
+<LI><A NAME="tex2html25"
+  HREF="node8.html">Bibliography</A>
+<LI><A NAME="tex2html26"
+  HREF="node9.html">About this document ...</A>
+</UL>
+<!--End of Table of Child-Links-->
+<BR><HR>
+<ADDRESS>
+
+2003-10-08
+</ADDRESS>
+</BODY>
+</HTML>

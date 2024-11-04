@@ -1,0 +1,9 @@
+<!--#set var="TITLE" value="ECGSYN for Solaris"-->
+<!--#include virtual="/head.shtml"-->
+
+
+<p>
+The executable <tt>ecgsyn</tt> file in this directory was compiled from
+these <a href="../src/">ECGSYN sources</a> with gcc 3.1 under SunOS 5.8
+(Solaris 8).
+

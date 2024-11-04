@@ -1,0 +1,9 @@
+<!--#set var="TITLE" value="ECGSYN for Matlab/Octave"-->
+<!--#include virtual="/head.shtml"-->
+
+
+<p>
+This directory contains <a href="../">ECGSYN</a> implemented in Matlab
+m-code.
+
+<hr>

@@ -1,0 +1,39 @@
+/************************************************************************/
+/*                                                                      */
+/* ECGSYN Java Application                                              */
+/*                                                                      */
+/* Copyright (C) 2003 Mauricio Villarroel                               */
+/* (mauricio DOT villarroel AT estudiantes DOT ucb DOT edu DOT bo)      */
+/*                                                                      */
+/* ecgApplet.java and all its components are free software; you can     */
+/* redistribute them and/or modify it under the terms of the            */
+/* GNU General Public License as published by the Free Software         */
+/* Foundation; either version 2 of the License, or (at your option)     */
+/* any later version.                                                   */
+/*                                                                      */
+/* This file is distributed in the hope that it will be useful, but     */
+/* WITHOUT ANY WARRANTY; without even the implied warranty of           */
+/* MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.                 */
+/* See the GNU General Public License for more details.                 */
+/*                                                                      */
+/************************************************************************/
+/*                                                                      */
+/* This file was created for the ECGSYN Application.                    */
+/*                                                                      */
+/* ECGSYN: A program for generating a realistic synthetic               */
+/* Electrocardiogram Signals.                                           */
+/* Copyright (c) 2003 by Patrick McSharry & Gari Clifford.              */
+/* All rights reserved.                                                 */
+/*                                                                      */
+/* See IEEE Transactions On Biomedical Engineering,                     */
+/* 50(3), 289-294, March 2003.                                          */
+/* Contact:                                                             */
+/* P. McSharry (patrick AT mcsharry DOT net)                            */
+/* G. Clifford (gari AT mit DOT edu)                                    */
+/*                                                                      */
+/************************************************************************/
+/*                                                                      */
+/* Further updates to this software will be published on:               */
+/* http://www.physionet.org/                                            */
+/*                                                                      */
+/************************************************************************/

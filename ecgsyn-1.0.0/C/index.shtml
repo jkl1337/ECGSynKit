@@ -1,0 +1,114 @@
+<!--#set var="TITLE" value="Compiling and using the C version of ECGSYN"-->
+<!--#include virtual="/head.shtml"-->
+
+
+
+<h2>Compiling ECGSYN</h2>
+
+<p>
+Sources for the C version of <a href="../">ECGSYN</a> are <a
+href="src/">here</a>.  Note, however, that two additional files are required in
+order to compile ECGSYN.  These files (<tt>dfour1.c</tt> and <tt>ran1.c</tt>)
+are those included in <a href="http://www.nr.com" target="other">Numerical
+Recipes in C</a>.  Before attempting to compile ECGSYN, obtain these two files
+from Numerical Recipes in C and place them in the same directory as the other
+sources.  (These files are not provided here because they cannot be freely
+redistributed.)
+
+<p>
+If you cannot obtain <tt>dfour1.c</tt> and <tt>ran1.c</tt>, several
+alternatives are available, including ready-to-run executable versions of
+ECGSYN for <a href="linux/">GNU/Linux</a>, <a href="solaris/">Solaris</a>, and
+<a href="windows/">MS-Windows</a>, as well as <a
+href="../Matlab/">Matlab/Octave</a> and <a href="../Java/">Java</a>
+implementations of ECGSYN.
+
+<p>
+On most platforms, including GNU/Linux, MacOS X, and Unix, compile ECGSYN
+by typing
+<pre>
+    make
+</pre>
+in a terminal window.  This will also work under MS-Windows if you have
+installed the free <a href="http://www.cygwin.com" target="other">Cygwin/gcc
+development toolkit</a>.  If you wish to use another compiler under MS-Windows,
+you are on your own.
+
+
+<h2>Running ECGSYN</h2>
+
+<p>
+The executable version is named <tt>ecgsyn</tt> (or, under MS-Windows,
+<tt>ecgsyn.exe</tt>).  Once you have this file, move it into any directory in
+your PATH and run it by typing
+<pre>
+    ecgsyn
+</pre>
+in a terminal window.  You may add options (switches) to the '<tt>ecgsyn</tt>'
+command; the option '<tt>$</tt>', as in
+<pre>
+    ecgsyn $
+</pre>
+starts ECGSYN in interactive mode, as shown below:
+
+<pre>
+    >> ecgsyn $
+    ECGSYN: A program for generating a realistic synthetic ECG
+    Copyright (c) 2003 by Patrick McSharry & Gari Clifford. All rights reserved.
+     
+    O Name of output data file                 "ecgsyn.dat"
+    n Approximate number of heart beats        256
+    s ECG sampling frequency [Hz]              256
+    S Internal Sampling frequency [Hz]         256
+    a Amplitude of additive uniform noise [mV] 0
+    h Heart rate mean [bpm]                    60
+    H Heart rate standard deviation [bpm]      1
+    f Low frequency [Hz]                       0.1
+    F High frequency [Hz]                      0.25
+    v Low frequency standard deviation [Hz]    0.01
+    V High frequency standard deviation [Hz]   0.01
+    q LF/HF ratio                              0.5
+    R Seed                                     1
+    (Type ? for Help)
+    ->
+</pre>
+
+<p>
+At the prompt, you can then type <tt>?</tt> for help, or simply specify each
+parameter that you want to change by typing the corresponding option letter (in
+the first column above) followed by a space and the new value, then
+&lt;enter&gt;.  To review the current settings, enter a blank line.  After you
+have modified all the parameters you want, type = followed by &lt;enter&gt; to
+run the program. You may also specify the parameters in a file called
+<tt>ecgsyn.opt</tt>, which is automatically read (if it exists) the next time
+you run the program.
+
+<p>
+Any of the options can also be entered directly on the command line, by
+prefixing the option letter with '<tt>-</tt>', as in:
+<pre>
+    ecgsyn -h 80 -n 100
+</pre>
+(which would create output at a mean heart rate of 80 bpm, lasting for about
+100 beats).
+
+<p>
+The source files <tt>opt.c</tt> and <tt>opt.h</tt> provide the option
+interpreter for ECGSYN; they were written by James Theiler.  For additional
+information, and for the most recent version of <tt>opt</tt>, see
+<a href="http://nis-www.lanl.gov/~jt/Software/"
+target="other"><tt>http://nis-www.lanl.gov/~jt/Software/</tt></a>.
+
+
+<h2>Interpreting ECGSYN's output</h2>
+
+<p>
+Unless you have changed the name of the output file with the '<tt>O</tt>'
+parameter, you will find the synthetic ECG written to a text file called
+<tt>ecgsyn.dat</tt>.  Click <a href="../sample-output/">here</a> for a sample
+of ECGSYN output and for a description of the format of this file.
+
+<hr>
+<!--#include virtual="/footer.shtml"-->
+</body>
+</html>

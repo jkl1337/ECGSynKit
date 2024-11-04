@@ -1,0 +1,596 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+
+<!--Converted with jLaTeX2HTML 2002 (1.62) JA patch-1.4
+patched version by:  Kenshi Muto, Debian Project.
+LaTeX2HTML 2002 (1.62),
+original version by:  Nikos Drakos, CBLU, University of Leeds
+* revised and updated by:  Marcus Hennecke, Ross Moore, Herb Swan
+* with significant contributions from:
+  Jens Lippmann, Marek Rouchal, Martin Wilck and others -->
+<HTML>
+<HEAD>
+<TITLE>The dynamical model</TITLE>
+<META NAME="description" CONTENT="The dynamical model">
+<META NAME="keywords" CONTENT="ecgpqrst">
+<META NAME="resource-type" CONTENT="document">
+<META NAME="distribution" CONTENT="global">
+
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-8859-1">
+<META NAME="Generator" CONTENT="jLaTeX2HTML v2002 JA patch-1.4">
+<META HTTP-EQUIV="Content-Style-Type" CONTENT="text/css">
+
+<LINK REL="STYLESHEET" HREF="ecgpqrst.css">
+
+<LINK REL="next" HREF="node5.html">
+<LINK REL="previous" HREF="node3.html">
+<LINK REL="up" HREF="index.shtml">
+<LINK REL="next" HREF="node5.html">
+</HEAD>
+
+<BODY >
+<!--Navigation Panel-->
+<A NAME="tex2html65"
+  HREF="node5.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next"
+ SRC="file:/usr/share/latex2html/icons/next.png"></A> 
+<A NAME="tex2html63"
+  HREF="index.shtml">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up"
+ SRC="file:/usr/share/latex2html/icons/up.png"></A> 
+<A NAME="tex2html57"
+  HREF="node3.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous"
+ SRC="file:/usr/share/latex2html/icons/prev.png"></A>   
+<BR>
+<B> Next:</B> <A NAME="tex2html66"
+  HREF="node5.html">Results</A>
+<B> Up:</B> <A NAME="tex2html64"
+  HREF="index.shtml">A dynamical model for</A>
+<B> Previous:</B> <A NAME="tex2html58"
+  HREF="node3.html">Heart rate variability</A>
+<BR>
+<BR>
+<!--End of Navigation Panel-->
+
+<H1><A NAME="SECTION00040000000000000000"></A>
+<A NAME="s:model"></A>
+<BR>
+The dynamical model
+</H1>
+The model generates a trajectory in a three-dimensional state space 
+with co-ordinates <IMG
+ WIDTH="56" HEIGHT="31" ALIGN="MIDDLE" BORDER="0"
+ SRC="img1.png"
+ ALT="$(x,y,z)$">. Quasi-periodicity of the ECG is reflected 
+by the movement of the trajectory around an attracting limit cycle of 
+unit radius in the <IMG
+ WIDTH="41" HEIGHT="31" ALIGN="MIDDLE" BORDER="0"
+ SRC="img11.png"
+ ALT="$(x,y)$">-plane. 
+Each revolution on this circle corresponds to one RR-interval or heart beat. 
+Inter-beat variation in the ECG is reproduced using the 
+motion of the trajectory in the <IMG
+ WIDTH="12" HEIGHT="14" ALIGN="BOTTOM" BORDER="0"
+ SRC="img12.png"
+ ALT="$z$">-direction. 
+Distinct points on the ECG, such as the P,Q,R,S and T are described by 
+<I>events</I> corresponding to  negative and positive attractors/repellors 
+in the <IMG
+ WIDTH="12" HEIGHT="14" ALIGN="BOTTOM" BORDER="0"
+ SRC="img12.png"
+ ALT="$z$">-direction. These events are placed at fixed angles along the 
+unit circle given by <IMG
+ WIDTH="22" HEIGHT="29" ALIGN="MIDDLE" BORDER="0"
+ SRC="img13.png"
+ ALT="$\theta_P$">, <IMG
+ WIDTH="22" HEIGHT="29" ALIGN="MIDDLE" BORDER="0"
+ SRC="img14.png"
+ ALT="$\theta_Q$">,<IMG
+ WIDTH="22" HEIGHT="29" ALIGN="MIDDLE" BORDER="0"
+ SRC="img15.png"
+ ALT="$\theta_R$">,<IMG
+ WIDTH="21" HEIGHT="29" ALIGN="MIDDLE" BORDER="0"
+ SRC="img16.png"
+ ALT="$\theta_S$"> and 
+<IMG
+ WIDTH="22" HEIGHT="29" ALIGN="MIDDLE" BORDER="0"
+ SRC="img17.png"
+ ALT="$\theta_T$"> (see Fig. <A HREF="node4.html#f:pqrst3d">2</A>). When the trajectory 
+approaches one of these events, it is pushed upwards or downwards 
+away from the limit cycle, and then as it moves away it is pulled back
+towards the limit cycle. 
+
+The dynamical equations of motion are given by a set of three ordinary 
+differential equations  
+<BR>
+<DIV ALIGN="CENTER"><A NAME="e:pqrst"></A>
+<!-- MATH
+ \begin{eqnarray}
+{\dot x} &=& \alpha x  - \omega y, \nonumber \\
+{\dot y} &=& \alpha y + \omega x, \nonumber \\
+{\dot z} &=& - \!\!\!\!\!\! \sum_{i \in \{P,Q,R,S,T\}} \!\!\!\!\!\! 
+a_i \Delta \theta_i 
+\exp(-\Delta \theta_i^2 / 2 b_i^2) -  (z - z_0),
+\end{eqnarray}
+ -->
+<TABLE ALIGN="CENTER" CELLPADDING="0" WIDTH="100%">
+<TR VALIGN="MIDDLE"><TD NOWRAP ALIGN="RIGHT"><IMG
+ WIDTH="13" HEIGHT="29" ALIGN="MIDDLE" BORDER="0"
+ SRC="img18.png"
+ ALT="$\displaystyle {\dot x}$"></TD>
+<TD ALIGN="CENTER" NOWRAP><IMG
+ WIDTH="16" HEIGHT="28" ALIGN="MIDDLE" BORDER="0"
+ SRC="img19.png"
+ ALT="$\textstyle =$"></TD>
+<TD ALIGN="LEFT" NOWRAP><IMG
+ WIDTH="66" HEIGHT="28" ALIGN="MIDDLE" BORDER="0"
+ SRC="img20.png"
+ ALT="$\displaystyle \alpha x - \omega y,$"></TD>
+<TD WIDTH=10 ALIGN="RIGHT">
+&nbsp;</TD></TR>
+<TR VALIGN="MIDDLE"><TD NOWRAP ALIGN="RIGHT"><IMG
+ WIDTH="12" HEIGHT="29" ALIGN="MIDDLE" BORDER="0"
+ SRC="img21.png"
+ ALT="$\displaystyle {\dot y}$"></TD>
+<TD ALIGN="CENTER" NOWRAP><IMG
+ WIDTH="16" HEIGHT="28" ALIGN="MIDDLE" BORDER="0"
+ SRC="img19.png"
+ ALT="$\textstyle =$"></TD>
+<TD ALIGN="LEFT" NOWRAP><IMG
+ WIDTH="66" HEIGHT="28" ALIGN="MIDDLE" BORDER="0"
+ SRC="img22.png"
+ ALT="$\displaystyle \alpha y + \omega x,$"></TD>
+<TD WIDTH=10 ALIGN="RIGHT">
+&nbsp;</TD></TR>
+<TR VALIGN="MIDDLE"><TD NOWRAP ALIGN="RIGHT"><IMG
+ WIDTH="12" HEIGHT="29" ALIGN="MIDDLE" BORDER="0"
+ SRC="img23.png"
+ ALT="$\displaystyle {\dot z}$"></TD>
+<TD ALIGN="CENTER" NOWRAP><IMG
+ WIDTH="16" HEIGHT="28" ALIGN="MIDDLE" BORDER="0"
+ SRC="img19.png"
+ ALT="$\textstyle =$"></TD>
+<TD ALIGN="LEFT" NOWRAP><IMG
+ WIDTH="304" HEIGHT="56" ALIGN="MIDDLE" BORDER="0"
+ SRC="img24.png"
+ ALT="$\displaystyle - \!\!\!\!\!\! \sum_{i \in \{P,Q,R,S,T\}} \!\!\!\!\!\!
+a_i \Delta \theta_i
+\exp(-\Delta \theta_i^2 / 2 b_i^2) - (z - z_0),$"></TD>
+<TD WIDTH=10 ALIGN="RIGHT">
+(1)</TD></TR>
+</TABLE></DIV>
+<BR CLEAR="ALL"><P></P>
+where <!-- MATH
+ $\alpha = 1 - \sqrt{x^2 + y^2}$
+ -->
+<IMG
+ WIDTH="130" HEIGHT="38" ALIGN="MIDDLE" BORDER="0"
+ SRC="img25.png"
+ ALT="$\alpha = 1 - \sqrt{x^2 + y^2}$">, 
+<!-- MATH
+ $\Delta \theta_i = (\theta - \theta_i) \ {\rm mod} \ 2 \pi$
+ -->
+<IMG
+ WIDTH="163" HEIGHT="31" ALIGN="MIDDLE" BORDER="0"
+ SRC="img26.png"
+ ALT="$\Delta \theta_i = (\theta - \theta_i) \ {\rm mod} \ 2 \pi$">, 
+<!-- MATH
+ $\theta = {\rm atan2}(y,x)$
+ -->
+<IMG
+ WIDTH="109" HEIGHT="31" ALIGN="MIDDLE" BORDER="0"
+ SRC="img27.png"
+ ALT="$\theta = {\rm atan2}(y,x)$"> and <IMG
+ WIDTH="15" HEIGHT="14" ALIGN="BOTTOM" BORDER="0"
+ SRC="img28.png"
+ ALT="$\omega$"> is the angular velocity 
+of the trajectory as it moves around the limit cycle. 
+Baseline wander was introduced by coupling the baseline value <IMG
+ WIDTH="19" HEIGHT="28" ALIGN="MIDDLE" BORDER="0"
+ SRC="img29.png"
+ ALT="$z_0$"> 
+in (<A HREF="node4.html#e:pqrst">1</A>) to the respiratory frequency <IMG
+ WIDTH="19" HEIGHT="29" ALIGN="MIDDLE" BORDER="0"
+ SRC="img30.png"
+ ALT="$f_2$"> using 
+<BR>
+<DIV ALIGN="RIGHT">
+
+<!-- MATH
+ \begin{equation}
+z_0(t) = A \sin(2 \pi f_2 t),
+\end{equation}
+ -->
+<TABLE WIDTH="100%" ALIGN="CENTER">
+<TR VALIGN="MIDDLE"><TD ALIGN="CENTER" NOWRAP><A NAME="e:baseline"></A><IMG
+ WIDTH="142" HEIGHT="28" BORDER="0"
+ SRC="img31.png"
+ ALT="\begin{displaymath}
+z_0(t) = A \sin(2 \pi f_2 t),
+\end{displaymath}"></TD>
+<TD WIDTH=10 ALIGN="RIGHT">
+(2)</TD></TR>
+</TABLE>
+<BR CLEAR="ALL"></DIV><P></P>
+where <IMG
+ WIDTH="66" HEIGHT="15" ALIGN="BOTTOM" BORDER="0"
+ SRC="img32.png"
+ ALT="$A = 0.15$"> mV. 
+
+These equations of motion given by (<A HREF="node4.html#e:pqrst">1</A>) were integrated 
+numerically using a fourth order 
+Runge-Kutta method [<A
+ HREF="node8.html#press92">15</A>] with a fixed time step <!-- MATH
+ $\Delta t = 1/f_s$
+ -->
+<IMG
+ WIDTH="75" HEIGHT="31" ALIGN="MIDDLE" BORDER="0"
+ SRC="img33.png"
+ ALT="$\Delta t = 1/f_s$"> 
+where <IMG
+ WIDTH="19" HEIGHT="29" ALIGN="MIDDLE" BORDER="0"
+ SRC="img34.png"
+ ALT="$f_s$"> is the sampling frequency.
+
+Visual analysis of a section of typical ECG from a normal subject 
+was used to suggest suitable times (and therefore angles <IMG
+ WIDTH="17" HEIGHT="29" ALIGN="MIDDLE" BORDER="0"
+ SRC="img35.png"
+ ALT="$\theta_i$">) 
+and values of <IMG
+ WIDTH="18" HEIGHT="28" ALIGN="MIDDLE" BORDER="0"
+ SRC="img36.png"
+ ALT="$a_i$"> and <IMG
+ WIDTH="16" HEIGHT="29" ALIGN="MIDDLE" BORDER="0"
+ SRC="img37.png"
+ ALT="$b_i$"> for the PQRST points. 
+The times and angles are specified relative to 
+the position of the R-peak as shown in Table <A HREF="node4.html#t:pqrst">I</A>.
+
+A trajectory generated by equation (<A HREF="node4.html#e:pqrst">1</A>) in three-dimensions 
+corresponding to <IMG
+ WIDTH="56" HEIGHT="31" ALIGN="MIDDLE" BORDER="0"
+ SRC="img1.png"
+ ALT="$(x,y,z)$"> is illustrated in Fig. <A HREF="node4.html#f:pqrst3d">2</A>. 
+This demonstrates how the 
+positions of the events <IMG
+ WIDTH="89" HEIGHT="29" ALIGN="MIDDLE" BORDER="0"
+ SRC="img38.png"
+ ALT="$P,Q,R,S,T$"> act on the trajectory in the 
+<IMG
+ WIDTH="12" HEIGHT="14" ALIGN="BOTTOM" BORDER="0"
+ SRC="img12.png"
+ ALT="$z$">-direction as it precesses around the unit circle in the <IMG
+ WIDTH="41" HEIGHT="31" ALIGN="MIDDLE" BORDER="0"
+ SRC="img11.png"
+ ALT="$(x,y)$">-plane. 
+The <IMG
+ WIDTH="12" HEIGHT="14" ALIGN="BOTTOM" BORDER="0"
+ SRC="img12.png"
+ ALT="$z$"> variable from the three-dimensional system (<A HREF="node4.html#e:pqrst">1</A>) 
+yields a synthetic ECG with realistic PQRST morphology 
+(Fig. <A HREF="node4.html#f:pqrstcomplex">3</A>). The similarity between the synthetic 
+ECG and the real ECG may be seen by comparing Fig. <A HREF="node4.html#f:pqrstcomplex">3</A> 
+with Fig. <A HREF="node1.html#f:garipqrst">1</A>. Note that noise has not been added
+to the model at this point.
+
+<BR><P></P>
+<DIV ALIGN="CENTER">
+
+<DIV ALIGN="CENTER">
+<A NAME="286"></A>
+<TABLE CELLPADDING=3 BORDER="1">
+<CAPTION><STRONG>Table I:</STRONG>
+Parameters of the ECG model given by (<A HREF="node4.html#e:pqrst">1</A>)</CAPTION>
+<TR><TD ALIGN="LEFT">Index (i)</TD>
+<TD ALIGN="LEFT">P</TD>
+<TD ALIGN="LEFT">Q</TD>
+<TD ALIGN="LEFT">R</TD>
+<TD ALIGN="LEFT">S</TD>
+<TD ALIGN="LEFT">T</TD>
+</TR>
+<TR><TD ALIGN="LEFT">Time (secs)</TD>
+<TD ALIGN="LEFT">-0.2</TD>
+<TD ALIGN="LEFT">-0.05</TD>
+<TD ALIGN="LEFT">0</TD>
+<TD ALIGN="LEFT">0.05</TD>
+<TD ALIGN="LEFT">0.3</TD>
+</TR>
+<TR><TD ALIGN="LEFT"><IMG
+ WIDTH="17" HEIGHT="29" ALIGN="MIDDLE" BORDER="0"
+ SRC="img35.png"
+ ALT="$\theta_i$"> (radians)</TD>
+<TD ALIGN="LEFT"><!-- MATH
+ $-\frac{1}{3}\pi$
+ -->
+<IMG
+ WIDTH="36" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="img39.png"
+ ALT="$-\frac{1}{3}\pi$"></TD>
+<TD ALIGN="LEFT"><!-- MATH
+ $-\frac{1}{12}\pi$
+ -->
+<IMG
+ WIDTH="43" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="img40.png"
+ ALT="$-\frac{1}{12}\pi$"></TD>
+<TD ALIGN="LEFT">0</TD>
+<TD ALIGN="LEFT"><!-- MATH
+ $\frac{1}{12}\pi$
+ -->
+<IMG
+ WIDTH="30" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="img41.png"
+ ALT="$\frac{1}{12}\pi$"></TD>
+<TD ALIGN="LEFT"><!-- MATH
+ $\frac{1}{2}\pi$
+ -->
+<IMG
+ WIDTH="24" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="img42.png"
+ ALT="$\frac{1}{2}\pi$"></TD>
+</TR>
+<TR><TD ALIGN="LEFT"><IMG
+ WIDTH="18" HEIGHT="28" ALIGN="MIDDLE" BORDER="0"
+ SRC="img36.png"
+ ALT="$a_i$"></TD>
+<TD ALIGN="LEFT">1.2</TD>
+<TD ALIGN="LEFT">-5.0</TD>
+<TD ALIGN="LEFT">30.0</TD>
+<TD ALIGN="LEFT">-7.5</TD>
+<TD ALIGN="LEFT">0.75</TD>
+</TR>
+<TR><TD ALIGN="LEFT"><IMG
+ WIDTH="16" HEIGHT="29" ALIGN="MIDDLE" BORDER="0"
+ SRC="img37.png"
+ ALT="$b_i$"></TD>
+<TD ALIGN="LEFT">0.25</TD>
+<TD ALIGN="LEFT">0.1</TD>
+<TD ALIGN="LEFT">0.1</TD>
+<TD ALIGN="LEFT">0.1</TD>
+<TD ALIGN="LEFT">0.4</TD>
+</TR>
+</TABLE>
+<A NAME="t:pqrst"></A> 
+
+</DIV>
+</DIV>
+<BR>
+
+<DIV ALIGN="CENTER"><A NAME="f:pqrst3d"></A><A NAME="288"></A>
+<TABLE>
+<CAPTION ALIGN="BOTTOM"><STRONG>Figure 2:</STRONG>
+A typical trajectory generated by the dynamical model 
+(<A HREF="node4.html#e:pqrst">1</A>) in the three-dimensional space given by <IMG
+ WIDTH="56" HEIGHT="31" ALIGN="MIDDLE" BORDER="0"
+ SRC="img1.png"
+ ALT="$(x,y,z)$">. The dashed 
+line reflects the limit cycle of unit radius while the small circles show the 
+positions of the P,Q,R,S,T events.</CAPTION>
+<TR><TD><IMG
+ WIDTH="351" HEIGHT="271" BORDER="0"
+ SRC="img43.png"
+ ALT="\begin{figure}
+\centerline{\psfig{file=pqrst3d.eps,width=7.75cm}}
+\end{figure}"></TD></TR>
+</TABLE>
+</DIV>
+
+<DIV ALIGN="CENTER"><A NAME="f:pqrstcomplex"></A><A NAME="128"></A>
+<TABLE>
+<CAPTION ALIGN="BOTTOM"><STRONG>Figure 3:</STRONG>
+Morphology of one PQRST-complex of the ECG.</CAPTION>
+<TR><TD><IMG
+ WIDTH="352" HEIGHT="275" BORDER="0"
+ SRC="img44.png"
+ ALT="\begin{figure}
+\centerline{\psfig{file=pqrstcomplex.eps,width=7.75cm}}
+\end{figure}"></TD></TR>
+</TABLE>
+</DIV>
+By contrasting the dynamical model (<A HREF="node4.html#e:pqrst">1</A>) with the mechanisms 
+underlying the cardiac cycle, it is obvious that the time required to 
+complete one lap of the limit cycle is equal to the RR-interval 
+of the synthetic ECG signal. Variations in the length of the RR-intervals 
+can be incorporated by varying the angular velocity <IMG
+ WIDTH="15" HEIGHT="14" ALIGN="BOTTOM" BORDER="0"
+ SRC="img28.png"
+ ALT="$\omega$">.
+
+The effects of both RSA and Mayer waves in the power spectrum 
+<IMG
+ WIDTH="37" HEIGHT="31" ALIGN="MIDDLE" BORDER="0"
+ SRC="img2.png"
+ ALT="$S(f)$"> of the RR-intervals are incorporated
+by generating RR-intervals which have a bimodal power spectrum  
+consisting of the sum of two Gaussian distributions,  
+<BR>
+<DIV ALIGN="RIGHT">
+
+<!-- MATH
+ \begin{equation}
+S(f) = \frac{\sigma_1^2}{\sqrt{2 \pi c_1^2}} 
+\exp \left( \frac{(f - f_1)^2}{2 c_1^2} \right)  
++ \frac{\sigma_2^2}{\sqrt{2 \pi c_2^2}} 
+\exp \left( \frac{(f - f_2)^2}{2 c_2^2} \right),
+\end{equation}
+ -->
+<TABLE WIDTH="100%" ALIGN="CENTER">
+<TR VALIGN="MIDDLE"><TD ALIGN="CENTER" NOWRAP><A NAME="e:Sf"></A><IMG
+ WIDTH="423" HEIGHT="48" BORDER="0"
+ SRC="img45.png"
+ ALT="\begin{displaymath}
+S(f) = \frac{\sigma_1^2}{\sqrt{2 \pi c_1^2}}
+\exp \left( ...
+...c_2^2}}
+\exp \left( \frac{(f - f_2)^2}{2 c_2^2} \right),
+\end{displaymath}"></TD>
+<TD WIDTH=10 ALIGN="RIGHT">
+(3)</TD></TR>
+</TABLE>
+<BR CLEAR="ALL"></DIV><P></P>
+with means <IMG
+ WIDTH="41" HEIGHT="29" ALIGN="MIDDLE" BORDER="0"
+ SRC="img46.png"
+ ALT="$f_1,f_2$"> and standard 
+deviations <IMG
+ WIDTH="39" HEIGHT="28" ALIGN="MIDDLE" BORDER="0"
+ SRC="img47.png"
+ ALT="$c_1,c_2$">.  Power in the LF and HF bands are given by 
+<IMG
+ WIDTH="21" HEIGHT="33" ALIGN="MIDDLE" BORDER="0"
+ SRC="img48.png"
+ ALT="$\sigma_1^2$"> and <IMG
+ WIDTH="21" HEIGHT="33" ALIGN="MIDDLE" BORDER="0"
+ SRC="img49.png"
+ ALT="$\sigma_2^2$"> respectively whereas the variance 
+equals the total area <!-- MATH
+ $\sigma^2 = \sigma^2_1+\sigma^2_2$
+ -->
+<IMG
+ WIDTH="95" HEIGHT="33" ALIGN="MIDDLE" BORDER="0"
+ SRC="img50.png"
+ ALT="$\sigma^2 = \sigma^2_1+\sigma^2_2$">,  
+yielding an LF/HF ratio of <!-- MATH
+ $\sigma^2_1/\sigma^2_2$
+ -->
+<IMG
+ WIDTH="46" HEIGHT="33" ALIGN="MIDDLE" BORDER="0"
+ SRC="img51.png"
+ ALT="$\sigma^2_1/\sigma^2_2$">.
+Fig. <A HREF="node4.html#f:Sf">4</A> shows the power spectrum <IMG
+ WIDTH="37" HEIGHT="31" ALIGN="MIDDLE" BORDER="0"
+ SRC="img2.png"
+ ALT="$S(f)$"> given 
+by <IMG
+ WIDTH="61" HEIGHT="29" ALIGN="MIDDLE" BORDER="0"
+ SRC="img52.png"
+ ALT="$f_1 = 0.1$">, 
+<IMG
+ WIDTH="69" HEIGHT="29" ALIGN="MIDDLE" BORDER="0"
+ SRC="img53.png"
+ ALT="$f_2 = 0.25$">, <IMG
+ WIDTH="68" HEIGHT="28" ALIGN="MIDDLE" BORDER="0"
+ SRC="img54.png"
+ ALT="$c_1 = 0.01$">, <IMG
+ WIDTH="68" HEIGHT="28" ALIGN="MIDDLE" BORDER="0"
+ SRC="img55.png"
+ ALT="$c_2 = 0.01$"> and <!-- MATH
+ $\sigma^2_1/\sigma^2_2 = 0.5$
+ -->
+<IMG
+ WIDTH="87" HEIGHT="33" ALIGN="MIDDLE" BORDER="0"
+ SRC="img56.png"
+ ALT="$\sigma^2_1/\sigma^2_2 = 0.5$">. 
+The Gaussian frequency distribution is motivated by the 
+typical power spectrum of a real RR tachogram [<A
+ HREF="node8.html#malik95">7</A>].
+
+<DIV ALIGN="CENTER"><A NAME="f:Sf"></A><A NAME="145"></A>
+<TABLE>
+<CAPTION ALIGN="BOTTOM"><STRONG>Figure 4:</STRONG>
+Power spectrum <IMG
+ WIDTH="37" HEIGHT="31" ALIGN="MIDDLE" BORDER="0"
+ SRC="img2.png"
+ ALT="$S(f)$"> of the RR-interval process 
+with a LF/HF ratio of <!-- MATH
+ $\sigma_1^2/\sigma_2^2 = 0.5$
+ -->
+<IMG
+ WIDTH="87" HEIGHT="33" ALIGN="MIDDLE" BORDER="0"
+ SRC="img3.png"
+ ALT="$\sigma _1^2/\sigma _2^2 = 0.5$">.</CAPTION>
+<TR><TD><IMG
+ WIDTH="352" HEIGHT="275" BORDER="0"
+ SRC="img57.png"
+ ALT="\begin{figure}
+\centerline{\psfig{file=Sf.eps,width=7.75cm}}
+\end{figure}"></TD></TR>
+</TABLE>
+</DIV>
+A RR-interval time series <IMG
+ WIDTH="34" HEIGHT="31" ALIGN="MIDDLE" BORDER="0"
+ SRC="img58.png"
+ ALT="$T(t)$"> with power spectrum <IMG
+ WIDTH="37" HEIGHT="31" ALIGN="MIDDLE" BORDER="0"
+ SRC="img2.png"
+ ALT="$S(f)$"> is generated by 
+taking the inverse Fourier transform of a sequence of complex numbers with 
+amplitudes <IMG
+ WIDTH="53" HEIGHT="37" ALIGN="MIDDLE" BORDER="0"
+ SRC="img59.png"
+ ALT="$\sqrt{S(f)}$"> and phases which are randomly 
+distributed between 0 and <IMG
+ WIDTH="22" HEIGHT="14" ALIGN="BOTTOM" BORDER="0"
+ SRC="img60.png"
+ ALT="$2 \pi$">.
+By multiplying this time series by an appropriate 
+scaling constant and adding an offset value, the resulting time series can be 
+given any required mean and standard deviation. 
+Suppose that <IMG
+ WIDTH="34" HEIGHT="31" ALIGN="MIDDLE" BORDER="0"
+ SRC="img58.png"
+ ALT="$T(t)$"> represents the time series generated by the RR-process 
+with power spectrum <IMG
+ WIDTH="37" HEIGHT="31" ALIGN="MIDDLE" BORDER="0"
+ SRC="img2.png"
+ ALT="$S(f)$">. The time-dependent 
+angular velocity <IMG
+ WIDTH="33" HEIGHT="31" ALIGN="MIDDLE" BORDER="0"
+ SRC="img61.png"
+ ALT="$\omega(t)$"> of motion around the limit cycle is then given 
+by 
+<BR>
+<DIV ALIGN="RIGHT">
+
+<!-- MATH
+ \begin{equation}
+\omega(t) = \frac{2 \pi}{T(t)}.
+\end{equation}
+ -->
+<TABLE WIDTH="100%" ALIGN="CENTER">
+<TR VALIGN="MIDDLE"><TD ALIGN="CENTER" NOWRAP><IMG
+ WIDTH="88" HEIGHT="42" BORDER="0"
+ SRC="img62.png"
+ ALT="\begin{displaymath}
+\omega(t) = \frac{2 \pi}{T(t)}.
+\end{displaymath}"></TD>
+<TD WIDTH=10 ALIGN="RIGHT">
+(4)</TD></TR>
+</TABLE>
+<BR CLEAR="ALL"></DIV><P></P>
+In this way the series of RR-intervals of the resultant 
+synthetic ECG will also have a power spectrum equal to <IMG
+ WIDTH="37" HEIGHT="31" ALIGN="MIDDLE" BORDER="0"
+ SRC="img2.png"
+ ALT="$S(f)$">; this will be 
+demonstrated in the next section.
+
+<HR>
+<!--Navigation Panel-->
+<A NAME="tex2html65"
+  HREF="node5.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next"
+ SRC="file:/usr/share/latex2html/icons/next.png"></A> 
+<A NAME="tex2html63"
+  HREF="index.shtml">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up"
+ SRC="file:/usr/share/latex2html/icons/up.png"></A> 
+<A NAME="tex2html57"
+  HREF="node3.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous"
+ SRC="file:/usr/share/latex2html/icons/prev.png"></A>   
+<BR>
+<B> Next:</B> <A NAME="tex2html66"
+  HREF="node5.html">Results</A>
+<B> Up:</B> <A NAME="tex2html64"
+  HREF="index.shtml">A dynamical model for</A>
+<B> Previous:</B> <A NAME="tex2html58"
+  HREF="node3.html">Heart rate variability</A>
+<!--End of Navigation Panel-->
+<ADDRESS>
+
+2003-10-08
+</ADDRESS>
+</BODY>
+</HTML>

@@ -1,0 +1,51 @@
+<!--#set var="TITLE" value="Example of ECGSYN output"-->
+<!--#include virtual="/head.shtml"-->
+
+
+<p>
+The files in this directory illustrate <tt>ECGSYN</tt> output obtained using
+its default settings.  The files <tt>ecgsyn.dat</tt> and <tt>rr.dat</tt> are
+created by <tt>ECGSYN</tt> itself.
+
+<p>
+<tt>ecgsyn.dat</tt> is a text file, which contains three columns:
+<ul>
+<li> the time in seconds
+<li> the ECG amplitude in millivolts
+<li> markers to indicate the locations of the waveform peaks:
+<table>
+<tr><td>0</td><td>(no peak)</td></tr>
+<tr><td>1</td><td>Top of P-wave</td></tr>
+<tr><td>2</td><td>Q-point</td></tr>
+<tr><td>3</td><td>Peak of R-wave</td></tr>
+<tr><td>4</td><td>S-point</td></tr>
+<tr><td>5</td><td>Peak of T-wave</td></tr>
+</table>
+</ul>
+
+<tt>rr.dat</tt> is also a text file, containing (in one column) a series of
+inter-beat (RR) intervals in seconds.
+
+<p>
+The files <tt>syn.hea</tt> and <tt>syn.dat</tt> are PhysioBank (WFDB) format
+header and signal files created from the <tt>ECGSYN</tt> output by:
+<pre>
+    wrsamp -F 256 -o syn -x 200 1 &lt;ecgsyn.dat
+</pre>
+These files can be read using any of the available
+<a href="/physiotools/wag/">WFDB applications</a>.
+
+<p>
+The file <tt>ecgsyn.png</tt> (shown below) was created from the
+first 4.5 seconds of <tt>ecgsyn.dat</tt>, using
+<a href="/physiotools/plt/">plt</a>:
+
+<pre>
+     plt ecgsyn.dat 0 1 -xa 0 4.5 -t "ECGSYN output" \
+       -x "Time (s)" -y "ECG Amplitude (mV)" -T lw | \
+     lwcat -png &gt;ecgsyn.png
+</pre>
+
+<center><img src="ecgsyn.png" alt="[ECGSYN output]"></center>
+
+<hr>

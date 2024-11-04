@@ -1,0 +1,169 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+
+<!--Converted with jLaTeX2HTML 2002 (1.62) JA patch-1.4
+patched version by:  Kenshi Muto, Debian Project.
+LaTeX2HTML 2002 (1.62),
+original version by:  Nikos Drakos, CBLU, University of Leeds
+* revised and updated by:  Marcus Hennecke, Ross Moore, Herb Swan
+* with significant contributions from:
+  Jens Lippmann, Marek Rouchal, Martin Wilck and others -->
+<HTML>
+<HEAD>
+<TITLE>Introduction</TITLE>
+<META NAME="description" CONTENT="Introduction">
+<META NAME="keywords" CONTENT="ecgpqrst">
+<META NAME="resource-type" CONTENT="document">
+<META NAME="distribution" CONTENT="global">
+
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-8859-1">
+<META NAME="Generator" CONTENT="jLaTeX2HTML v2002 JA patch-1.4">
+<META HTTP-EQUIV="Content-Style-Type" CONTENT="text/css">
+
+<LINK REL="STYLESHEET" HREF="ecgpqrst.css">
+
+<LINK REL="next" HREF="node2.html">
+<LINK REL="previous" HREF="index.shtml">
+<LINK REL="up" HREF="index.shtml">
+<LINK REL="next" HREF="node2.html">
+</HEAD>
+
+<BODY >
+<!--Navigation Panel-->
+<A NAME="tex2html35"
+  HREF="node2.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next"
+ SRC="file:/usr/share/latex2html/icons/next.png"></A> 
+<A NAME="tex2html33"
+  HREF="index.shtml">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up"
+ SRC="file:/usr/share/latex2html/icons/up.png"></A> 
+<A NAME="tex2html27"
+  HREF="index.shtml">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous"
+ SRC="file:/usr/share/latex2html/icons/prev.png"></A>   
+<BR>
+<B> Next:</B> <A NAME="tex2html36"
+  HREF="node2.html">ECG morphology</A>
+<B> Up:</B> <A NAME="tex2html34"
+  HREF="index.shtml">A dynamical model for</A>
+<B> Previous:</B> <A NAME="tex2html28"
+  HREF="index.shtml">A dynamical model for</A>
+<BR>
+<BR>
+<!--End of Navigation Panel-->
+
+<H1><A NAME="SECTION00010000000000000000">
+Introduction</A>
+</H1>
+The 
+electrocardiogram (ECG) is a time-varying signal reflecting the 
+ionic current flow which causes the cardiac fibres to contract and 
+subsequently relax. 
+The surface ECG is obtained by recording the potential difference between  
+two electrodes placed on the surface of the skin.
+A single normal cycle of the ECG represents the successive atrial 
+depolarisation/repolarisation and ventricular depolarisation/repolarisation 
+which occurs with every heart beat. These can be approximately associated 
+with the peaks and troughs of the ECG waveform labelled P,Q,R,S and T as 
+shown in Fig. <A HREF="node1.html#f:garipqrst">1</A>. 
+
+Extracting useful clinical information from the real (noisy) ECG requires 
+reliable signal processing techniques [<A
+ HREF="node8.html#goldberger77">1</A>]. 
+These include R-peak detection [<A
+ HREF="node8.html#pan85">2</A>,<A
+ HREF="node8.html#kaplan91">3</A>], 
+QT-interval detection [<A
+ HREF="node8.html#davey99">4</A>] 
+and the derivation of heart rate and respiration rate 
+from the ECG [<A
+ HREF="node8.html#moody85">5</A>,<A
+ HREF="node8.html#moody86">6</A>]. 
+The RR-interval is the time between 
+successive R-peaks, the inverse of this time interval gives the 
+instantaneous heart rate. 
+A series of RR-intervals is known as a RR tachogram and variability of  
+these RR-intervals reveals important information about the physiological state 
+of the subject [<A
+ HREF="node8.html#malik95">7</A>]. 
+At present, new biomedical signal processing algorithms are usually evaluated 
+by applying them to ECGs in a large database such as the Physionet 
+database [<A
+ HREF="node8.html#physionet">8</A>].
+While this gives the operator an indication of the accuracy of a given 
+algorithm when applied to real data, it is difficult to infer how the 
+performance would vary in different clinical settings with a range of
+noise levels and sampling frequencies.
+Having access to realistic artificial ECG signals may  
+facilitate this evaluation.
+
+<DIV ALIGN="CENTER"><A NAME="f:garipqrst"></A><A NAME="53"></A>
+<TABLE>
+<CAPTION ALIGN="BOTTOM"><STRONG>Figure 1:</STRONG>
+Morphology of a mean PQRST-complex of an ECG recorded 
+from a normal human.</CAPTION>
+<TR><TD><IMG
+ WIDTH="352" HEIGHT="279" BORDER="0"
+ SRC="img10.png"
+ ALT="\begin{figure}
+\centerline{\psfig{file=garipqrst.eps,width=7.75cm}}
+\end{figure}"></TD></TR>
+</TABLE>
+</DIV>
+This paper presents a model for generating a synthetic ECG signal with 
+realistic PQRST morphology and prescribed heart rate dynamics.
+The aim of this model is to provide a 
+standard realistic ECG signal with known characteristics, 
+which can be generated with specific statistics  
+such as the mean and standard deviation of the heart rate 
+and frequency-domain characteristics of heart rate variability (HRV), 
+such as the LF/HF ratio, defined as the ratio of power between 0.015 and 
+0.15 Hz and 0.15 and 0.4 Hz in the RR tachogram [<A
+ HREF="node8.html#malik95">7</A>]. 
+By generating a signal which represents a <I>typical</I> human ECG, this 
+facilitates a comparison of different signal processing techniques. 
+A synthetic ECG can be generated with different sampling frequencies and  
+different noise levels in order to establish the performance of  
+a given technique. This performance can be presented, for example, 
+as the number of true positives, false positives, true negatives and false 
+negatives for each test. Such performance assessment could be used as 
+a ``standard'' and would enable clinicians to ascertain which biomedical 
+signal processing techniques were best for a given application.
+
+The layout of this paper is as follows; section <A HREF="node2.html#s:morphology">II</A> 
+summarises the physiological mechanisms underlying the cardiac cycle and  
+reviews the morphological variability which is reflected in the ECG signal. 
+A brief review of HRV is presented in 
+section <A HREF="node3.html#s:hrv">III</A>. The dynamical model is introduced in 
+section <A HREF="node4.html#s:model">IV</A> and investigated in section <A HREF="node5.html#s:results">V</A>. 
+Section <A HREF="node6.html#s:conclusions">VI</A> concludes and discusses extensions to 
+the model which may be useful for simulating specific disorders.
+
+<HR>
+<!--Navigation Panel-->
+<A NAME="tex2html35"
+  HREF="node2.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next"
+ SRC="file:/usr/share/latex2html/icons/next.png"></A> 
+<A NAME="tex2html33"
+  HREF="index.shtml">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up"
+ SRC="file:/usr/share/latex2html/icons/up.png"></A> 
+<A NAME="tex2html27"
+  HREF="index.shtml">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous"
+ SRC="file:/usr/share/latex2html/icons/prev.png"></A>   
+<BR>
+<B> Next:</B> <A NAME="tex2html36"
+  HREF="node2.html">ECG morphology</A>
+<B> Up:</B> <A NAME="tex2html34"
+  HREF="index.shtml">A dynamical model for</A>
+<B> Previous:</B> <A NAME="tex2html28"
+  HREF="index.shtml">A dynamical model for</A>
+<!--End of Navigation Panel-->
+<ADDRESS>
+
+2003-10-08
+</ADDRESS>
+</BODY>
+</HTML>
